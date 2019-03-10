@@ -1,13 +1,31 @@
-<html>
-    <head>
-        <title>Test Dense Server</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="styles/style.css">
-    </head>
-    <body>
-        <form method="POST" action="http://146.169.190.207:5000/" enctype=multipart/form-data>
-            file : <input type="file" name="image"><br />
-            <input type="submit" value="submit"><br />
-        </form>
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="test.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <form method="POST" action="http://localhost:5000/" enctype=multipart/form-data>
+      <h1 class="cover-heading">Rash Diagnostic Tool</h1>
+      <p></p>
+        <h1 class="lead">Please take or upload a photo of the rash</h1>
+        <p></p>
+        <input type="file" name="image"><br />
+        <p></p>
+        <input type="submit" class="btn btn-lg btn-secondary"value="Identify my rash"><br />
+        <p></p>
+        <p class="mt-5 mb-3 text-muted">&copy; Yeet Infection 2019</p>
+    </form>
+  </body>
 </html>

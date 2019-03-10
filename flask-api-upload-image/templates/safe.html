@@ -1,45 +1,93 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <meta charset="utf-8">
   <title></title>
+  <link href="safe.css" rel="stylesheet">
 </head>
 <body>
-  <div class="jumbotron">
     <ul>
-       {% if n == "foo"%}
-       <h1 class="display-4">Your rash should be looked at by a medical professional</h1>
-       {%endif%}
-       {% if n == "urticaria"%}
-       <h1 class="display-4">Your rash is has been identified as Hives</h1>
-       <p></p>
-       <a href="https://www.webmd.com/allergies/understanding-hives-treatment">Click here</a> for more information on what to do next
-       {%endif%}
-       {% if n == "dyshidrosis"%}
-       <h1 class="display-4">Your rash is has been identified as Dyshidrosis</h1>
-       <a href="https://www.webmd.com/skin-problems-and-treatments/eczema/dyshidrotic-eczema#2">Click here</a> for more information on what to do next
-       {%endif%}
-       {% if n == "melanoma"%}
-       <h1 class="display-4">Your rash is has been identified as Melanoma</h1>
-       <a href="https://www.webmd.com/melanoma-skin-cancer/understanding-skin-cancer-treatment#1">Click here</a> for more information on what to do next
-       {%endif%}
-       {% if n == "basalcellcarcinoma"%}
-       <h1 class="display-4">Your rash is has been identified as Basal Cell Carcinoma</h1>
-       <a href="https://www.webmd.com/melanoma-skin-cancer/basal-cell-carcinoma#2">Click here</a> for more information on what to do next
-       {%endif%}
-       <!-- {% if n == 5%}
-       <h1 class="display-4">No need to panic! You do not have a rash!</h1>
-       {%endif%} -->
-<hr class="my-4"></hr>
-    <p></p>
-    <i>Please note that this is not a reliable tool. See a doctor for an accurate diagnosis.</i>
-    <p></p>
-    <p>Press the button below to identify another rash.</p>
-    <a class="btn btn-primary btn-lg" href="test.html" role="button">Return to rash identifier</a>
+      {% if n == "foo"%}
+      <h1 class="display-4">Your rash should be looked at by a medical professional</h1>
+      {%endif%}
+      {% if n == "urticaria"%}
+      <h1 class="display-4">Your rash is has been identified as Hives</h1>
+      <p></p>
+      <a href="https://www.webmd.com/allergies/understanding-hives-treatment">Click here</a> for more information on what to do next
+      {%endif%}
+      {% if n == "dyshidrosis"%}
+      <h1 class="display-4">Your rash is has been identified as Dyshidrosis</h1>
+      <a href="https://www.webmd.com/skin-problems-and-treatments/eczema/dyshidrotic-eczema#2">Click here</a> for more information on what to do next
+      {%endif%}
+      {% if n == "melanoma"%}
+      <h1 class="display-4">Your rash is has been identified as Melanoma</h1>
+      <a href="https://www.webmd.com/melanoma-skin-cancer/understanding-skin-cancer-treatment#1">Click here</a> for more information on what to do next
+      {%endif%}
+      {% if n == "basalcellcarcinoma"%}
+      <h1 class="display-4">Your rash is has been identified as Basal Cell Carcinoma</h1>
+      <a href="https://www.webmd.com/melanoma-skin-cancer/basal-cell-carcinoma#2">Click here</a> for more information on what to do next
+      {%endif%}
+      <hr class="my-4"></hr>
+      <p></p>
+      <i>Please note that this is not a reliable tool. See a doctor for an accurate diagnosis.</i>
+      <p></p>
+      <p>Press the button below to identify another rash.</p>
+      <a class="btn btn-lg btn-secondary" href="test.html" role="button">Rash identifier</a>
 
-     </ul>
+    </ul>
 
-  </div>
 </body>
+</html>
+
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Signin Template for Bootstrap</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='safe.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='bootstrap.min.css') }}">
+
+    <!-- Bootstrap core CSS -->
+  <!--  <link href="bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Custom styles for this template -->
+
+
+
+  </head>
+<ul>
+  <body class="text-center">
+    {% if n[1] < 0.6 %}
+       <h1 class="display-4">Sorry, we could not identify. This upload another photo</h1>
+      {% elif n[0] == "foo"%}
+      <h1 class="display-4">Your rash should be looked at by a medical professional</h1>
+      {% elif n[0] == "urticaria"%}
+      <h1 class="display-4">Your rash is has been identified as Hives</h1>
+      <p></p>
+      <a href="https://www.webmd.com/allergies/understanding-hives-treatment">Click here</a> for more information on what to do next
+      {% elif n[0] == "dyshidrosis"%}
+      <h1 class="display-4">Your rash is has been identified as Dyshidrosis</h1>
+      <a href="https://www.webmd.com/skin-problems-and-treatments/eczema/dyshidrotic-eczema#2">Click here</a> for more information on what to do next
+      {% elif n[0] == "melanoma"%}
+      <h1 class="display-4">Your rash is has been identified as Melanoma</h1>
+      <a href="https://www.webmd.com/melanoma-skin-cancer/understanding-skin-cancer-treatment#1">Click here</a> for more information on what to do next
+      {% elif n[0] == "basalcellcarcinoma"%}
+      <h1 class="display-4">Your rash is has been identified as Basal Cell Carcinoma</h1>
+      <a href="https://www.webmd.com/melanoma-skin-cancer/basal-cell-carcinoma#2">Click here</a> for more information on what to do next
+      {% elif n[0] == "normalskin"%}
+      <h1 class="display-4">You are fine.</h1>
+      {% elif n[0] == "photos"%}
+      <h1 class="display-4">Please upload your rash.</h1>
+      {%endif%}
+      <p> {{ (n[1]*100)|round }}% confidence  </p>
+      <p class="mt-5 mb-3 text-muted">&copy; Yeet Infection 2019</p>
+</ul>
+  </body>
 </html>
