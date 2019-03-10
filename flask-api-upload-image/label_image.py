@@ -74,8 +74,8 @@ def load_labels(label_file):
 
 def label(file_name):
   model_file = \
-    "output_graph.pb"
-  label_file = "output_labels.txt"
+    "output_graph_v2.pb"
+  label_file = "output_labels_v2.txt"
   input_height = 299
   input_width = 299
   input_mean = 0
