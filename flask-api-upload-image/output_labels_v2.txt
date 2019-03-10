@@ -1,4 +1,6 @@
 basalcellcarcinoma
 dyshidrosis
 melanoma
+normalskin
+photos
 urticaria
