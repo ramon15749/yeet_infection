@@ -1,30 +1,13 @@
-<!DOCTYPE html>
-<link href="styles/style.css" rel="stylesheet" type="text/css" media="all">
-<html lang="en" dir="ltr">
-<head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <meta charset="utf-8">
-  <title>Test Dense Server</title>
-</head>
-  <p></p>
-  <div class="container">
-    <div class="card text-center">
-      <div class="display-4">
-        Rash Identifier
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Please select a photo of the rash from your device.</h5>
-        <p class="card-text"></p>
-        <form method="POST" action="http://localhost:5000/" enctype=multipart/form-data>
-          <input type="file" name="image"><br />
-          <p></p>
-          <input class="btn btn-primary" type="submit" value="Identify my rash"><br />
+<html>
+    <head>
+        <title>Test Dense Server</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+    </head>
+    <body>
+        <form method="POST" action="http://146.169.190.207:5000/" enctype=multipart/form-data>
+            file : <input type="file" name="image"><br />
+            <input type="submit" value="submit"><br />
         </form>
-      </div>
-      <div class="card-footer text-muted">
-        Powered by humanity
-      </div>
-    </div>
-  </div>
-</body>
+    </body>
 </html>
