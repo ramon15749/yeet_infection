@@ -105,4 +105,4 @@ def label(file_name):
 
   top_k = results.argsort()[-5:][::-1]
   labels = load_labels(label_file)
-  return(labels[top_k[0]])
+  return(labels[top_k[0]], results[top_k[0]])
