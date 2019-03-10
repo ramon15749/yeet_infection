@@ -18,26 +18,26 @@ def create_new_folder(local_dir):
     newpath = local_dir
     if not os.path.exists(newpath):
         os.makedirs(newpath)
-    return newpath
+        return newpath
 
 
 @app.route('/', methods = ['POST'])
 def api_root():
     app.logger.info(PROJECT_HOME)
     if request.method == 'POST' and request.files['image']:
-    	app.logger.info(app.config['UPLOAD_FOLDER'])
-    	img = request.files['image']
-    	img_name = secure_filename(img.filename)
-    	create_new_folder(app.config['UPLOAD_FOLDER'])
-    	saved_path = os.path.join(app.config['UPLOAD_FOLDER'], img_name)
-    	app.logger.info("saving {}".format(saved_path))
-    	img.save(saved_path)
+        app.logger.info(app.config['UPLOAD_FOLDER'])
+        img = request.files['image']
+        img_name = secure_filename(img.filename)
+        create_new_folder(app.config['UPLOAD_FOLDER'])
+        saved_path = os.path.join(app.config['UPLOAD_FOLDER'], img_name)
+        app.logger.info("saving {}".format(saved_path))
+        img.save(saved_path)
         im = Image.open(saved_path)
         print("do")
         n = lb.label(saved_path)
-    	return render_template('safe.html', n=n)
+        return render_template('safe.html', n=n)
     else:
-    	return "Where is the image?"
+        return "Where is the image?"
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=False)
+        if __name__ == '__main__':
+            app.run(host='0.0.0.0', debug=False)
