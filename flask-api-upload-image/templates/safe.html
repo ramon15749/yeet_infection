@@ -19,28 +19,34 @@
 <ul>
   <body class="text-center">
     {% if n[1] < 0.6 %}
-       <h1 class="display-4">Sorry, we could not identify. This upload another photo</h1>
+       <h1 class="display-4">Sorry, we could not identify this photo. Please upload another photo</h1>
       {% elif n[0] == "foo"%}
       <h1 class="display-4">Your rash should be looked at by a medical professional</h1>
       {% elif n[0] == "urticaria"%}
-      <h1 class="display-4">Your rash is has been identified as Hives</h1>
+      <h1 class="display-4">Your rash has been identified as Hives</h1>
       <p></p>
       <a href="https://www.webmd.com/allergies/understanding-hives-treatment">Click here</a> for more information on what to do next
       {% elif n[0] == "dyshidrosis"%}
-      <h1 class="display-4">Your rash is has been identified as Dyshidrosis</h1>
+      <h1 class="display-4">Your rash has been identified as Dyshidrosis</h1>
       <a href="https://www.webmd.com/skin-problems-and-treatments/eczema/dyshidrotic-eczema#2">Click here</a> for more information on what to do next
       {% elif n[0] == "melanoma"%}
-      <h1 class="display-4">Your rash is has been identified as Melanoma</h1>
+      <h1 class="display-4">Your rash has been identified as Melanoma</h1>
       <a href="https://www.webmd.com/melanoma-skin-cancer/understanding-skin-cancer-treatment#1">Click here</a> for more information on what to do next
       {% elif n[0] == "basalcellcarcinoma"%}
-      <h1 class="display-4">Your rash is has been identified as Basal Cell Carcinoma</h1>
+      <h1 class="display-4">Your rash has been identified as Basal Cell Carcinoma</h1>
       <a href="https://www.webmd.com/melanoma-skin-cancer/basal-cell-carcinoma#2">Click here</a> for more information on what to do next
       {% elif n[0] == "normalskin"%}
       <h1 class="display-4">You are fine.</h1>
       {% elif n[0] == "photos"%}
-      <h1 class="display-4">Please upload your rash.</h1>
+      <h1 class="display-4">We do not think this is a photo of a rash. Please upload a photo of the rash.</h1>
       {%endif%}
-      <p> {{ (n[1]*100)|round }}% confidence  </p>
+      <p> With {{ (n[1]*100)|round }}% confidence  </p>
+      <hr class="my-4"></hr>
+      <p></p>
+<i>Please note that this is not a reliable tool. See a doctor for an accurate diagnosis.</i>
+<p></p>
+<p>Press the button below to identify another rash.</p>
+<a class="btn btn-lg btn-secondary" href="test.html" role="button">Rash identifier</a>
       <p class="mt-5 mb-3 text-muted">&copy; Yeet Infection 2019</p>
 </ul>
   </body>
