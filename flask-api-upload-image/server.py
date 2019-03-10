@@ -1,4 +1,4 @@
-from flask import Flask, url_for, send_from_directory, request
+from flask import Flask, url_for, send_from_directory, request, render_template
 import logging, os
 from PIL import Image, ImageFilter
 from werkzeug import secure_filename
@@ -20,6 +20,7 @@ def create_new_folder(local_dir):
         os.makedirs(newpath)
     return newpath
 
+
 @app.route('/', methods = ['POST'])
 def api_root():
     app.logger.info(PROJECT_HOME)
@@ -33,7 +34,8 @@ def api_root():
     	img.save(saved_path)
         im = Image.open(saved_path)
         print("do")
-    	return lb.label(saved_path)
+        n = lb.label(saved_path)
+    	return render_template('safe.html', n=n)
     else:
     	return "Where is the image?"
 

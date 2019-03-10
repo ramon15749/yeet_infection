@@ -8,31 +8,29 @@
 <body>
   <div class="jumbotron">
     <ul>
-       {% for n in my_list %}
-       {% if n == 0%}
+       {% if n == "foo"%}
        <h1 class="display-4">Your rash should be looked at by a medical professional</h1>
        {%endif%}
-       {% if n == 1%}
+       {% if n == "urticaria"%}
        <h1 class="display-4">Your rash is has been identified as Hives</h1>
        <p></p>
        <a href="https://www.webmd.com/allergies/understanding-hives-treatment">Click here</a> for more information on what to do next
        {%endif%}
-       {% if n == 2%}
+       {% if n == "dyshidrosis"%}
        <h1 class="display-4">Your rash is has been identified as Dyshidrosis</h1>
        <a href="https://www.webmd.com/skin-problems-and-treatments/eczema/dyshidrotic-eczema#2">Click here</a> for more information on what to do next
        {%endif%}
-       {% if n == 3%}
+       {% if n == "melanoma"%}
        <h1 class="display-4">Your rash is has been identified as Melanoma</h1>
        <a href="https://www.webmd.com/melanoma-skin-cancer/understanding-skin-cancer-treatment#1">Click here</a> for more information on what to do next
        {%endif%}
-       {% if n == 4%}
+       {% if n == "basalcellcarcinoma"%}
        <h1 class="display-4">Your rash is has been identified as Basal Cell Carcinoma</h1>
        <a href="https://www.webmd.com/melanoma-skin-cancer/basal-cell-carcinoma#2">Click here</a> for more information on what to do next
        {%endif%}
-       {% if n == 5%}
+       <!-- {% if n == 5%}
        <h1 class="display-4">No need to panic! You do not have a rash!</h1>
-       {%endif%}
-       {% endfor %}
+       {%endif%} -->
 <hr class="my-4"></hr>
     <p></p>
     <i>Please note that this is not a reliable tool. See a doctor for an accurate diagnosis.</i>

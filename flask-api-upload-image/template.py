@@ -1,10 +1,11 @@
 from flask import Flask, render_template
+import label_image as lb
 app = Flask(__name__)
 
-
+n = lb.label(saved_path)
 @app.route("/")
 def template_test():
-    return render_template('safe.html', my_string="Wheeeee!", my_list=[0,1,2,3,4,5])
+    return render_template('safe.html', lb(saved_path))
 
 
 if __name__ == '__main__':
